@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Visualization Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#DBD6D6">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>       
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="background-color: #139992"> <font color="white">Emcee Module Example</font></a>
+    </div>
+    
+    <ul class="nav navbar-nav pull-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="plot01.html">Data Plot</a></li>
+          <li><a href="plot02.html">Linear Least Squares</a></li>
+          <li><a href="plot03.html">MCMC walk chain</a></li>
+          <li><a href="plot04.html">Corner Plot</a></li>
+        </ul>
+      </li>
+      <li><a href="fitting.html">Fitting</a></li>
+      <li><a href="data.html">Data</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container" style="background-color:#DBD6D6">
+  <div class="row">
+    <div class="col-md-8 form-group" style="background-color:#FFFFFF">
+   
+      
+        <h2>Example: Fitting a Model to Data</h2>
+        <p>emcee is an extensible, pure-Python implementation of Goodman & Weare's Affine Invariant Markov chain Monte Carlo (MCMC) Ensemble sampler. It's designed for Bayesian parameter estimation and it's really sweet!</p>
+        <br>
+        <hr>
+
+      
+        <img src="resources/walk_chain.png" alt="MCMC walk chain" width="300" height="300" class="pull-left" hspace="20" vspace="10">
+  
+
+        <p>If you’re reading this right now then you’re probably interested in using emcee to fit a model to some noisy data. On this page, I’ll demonstrate how you might do this in the simplest non-trivial model that I could think of: fitting a line to data when you don’t believe the error bars on your data. The interested reader should check out <a href="http://dfm.io/emcee/current/user/line/"> Hogg, Bovy & Lang (2010)</a> for a much more complete discussion of how to fit a line to data in The Real World™ and why MCMC might come in handy.</p>
+        <br>
+
+        <p>When you approach a new problem, the first step is generally to write down the likelihood function (the probability of a dataset given the model parameters). This is equivalent to describing the generative procedure for the data. In this case, we’re going to consider a linear model where the quoted uncertainties are underestimated by a constant fractional amount. You can generate a synthetic dataset from this model.</p>
+        <br>
+
+        <p>It is necessary that you write down priors if you’re going to use MCMC because all that MCMC does is draw samples from a probability distribution and you want that to be a probability distribution for your parameters. This is important: you cannot draw parameter samples from your likelihood function. This is because a likelihood function is a probability distribution over datasets so, conditioned on model parameters, you can draw representative datasets (as demonstrated at the beginning of this exercise) but you cannot draw parameter samples.</p>
+
+        <br>
+        <br>
+
+    </div>
+
+    <div class="col-md-3 col-md-offset-1" style="background-color:#FFFFFF">
+    <!-- <div class="col-md-4 form-group" style="background-color:#FFFFFF"> -->
+        <h3>Plots from This Example</h3>
+        <p>click plot for more information</p>
+        <br>
+        <hr>
+        <a href="plot01.html">
+        <img src="resources/data_n_true.png" width="110" height="110" hspace="5" vspace="10"></a>
+        <a href="plot02.html">
+        <img src="resources/LLS_sol.png" width="110" height="110" hspace="5" vspace="10"></a>
+        <a href="plot03.html">
+        <img src="resources/walk_chain.png" width="110" height="110" hspace="5" vspace="10"></a>
+        <a href="plot04.html">
+        <img src="resources/corner.png" width="110" height="110" hspace="5" vspace="10"></a>
+        <br>
+        <br>
+
+
+    </div>
+
+   
+  </div>
+</div>
+
+<br>
+<br>
+
+<!-- <div class="panel panel-default"> -->
+
+<div class="footer navbar-fixed-bottom" style="background-color:#4C4E4C">
+  <br>
+  <div class="footer-copyright py-3 text-center">
+        <font color=#FFFFFF>© 2018 Copyright: Data Science Boot Camp</font>
+  </div>
+  <br>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

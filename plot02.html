@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Visualization Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#DBD6D6">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>       
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html" style="background-color: #139992"> <font color="white">Emcee Module Example</font></a>
+    </div>
+    
+    <ul class="nav navbar-nav pull-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="plot01.html">Data Plot</a></li>
+          <li><a href="plot02.html">Linear Least Squares</a></li>
+          <li><a href="plot03.html">MCMC walk chain</a></li>
+          <li><a href="plot04.html">Corner Plot</a></li>
+        </ul>
+      </li>
+      <li><a href="fitting.html">Fitting</a></li>
+      <li><a href="data.html">Data</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container" style="background-color:#DBD6D6">
+  <div class="row">
+    <div class="col-md-8 form-group" style="background-color:#FFFFFF">
+   
+      <br>
+        <h2>Linear Least Sequares Solution</h2>
+        <br>
+        <hr>
+
+      <div class="text-center">
+        <img src="resources/LLS_sol.png" alt="Linear Least Squares solution" width="576" height="432" hspace="20" vspace="10" align="middle">
+
+      </div>
+
+        <p>Linear least squares is appealing because solving for the parameters—and their associated uncertainties—is simply a linear algebraic operation. Following the notation in <a href="http://dfm.io/emcee/current/user/line/"> Hogg, Bovy & Lang (2010)</a>, the linear least squares solution to these data is plotted above as a dashed line.</p>
+        <br>
+
+        
+
+        <br>
+        <br>
+
+    </div>
+
+    <div class="col-md-3 col-md-offset-1" style="background-color:#FFFFFF">
+    <!-- <div class="col-md-4 form-group" style="background-color:#FFFFFF"> -->
+        <h3>Plots from This Example</h3>
+    
+        <br>
+        <hr>
+      
+        <img src="resources/data_n_true.png" width="110" height="110" hspace="5" vspace="10">
+        <img src="resources/LLS_sol.png" width="110" height="110" hspace="5" vspace="10" style='border:1px solid #000000'>
+
+        <img src="resources/walk_chain.png" width="110" height="110" hspace="5" vspace="10">
+        <img src="resources/corner.png" width="110" height="110" hspace="5" vspace="10">
+        <br>
+        <br>
+
+
+    </div>
+
+   
+  </div>
+</div>
+
+<br>
+<br>
+
+<!-- <div class="panel panel-default"> -->
+
+<div class="footer navbar-fixed-bottom" style="background-color:#4C4E4C">
+  <br>
+  <div class="footer-copyright py-3 text-center">
+        <font color=#FFFFFF>© 2018 Copyright: Data Science Boot Camp</font>
+  </div>
+  <br>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

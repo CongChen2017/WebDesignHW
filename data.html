@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Visualization Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#DBD6D6">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>       
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html" style="background-color: #139992"> <font color="white">Emcee Module Example</font></a>
+    </div>
+    
+    <ul class="nav navbar-nav pull-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="plot01.html">Data Plot</a></li>
+          <li><a href="plot02.html">Linear Least Squares</a></li>
+          <li><a href="plot03.html">MCMC walk chain</a></li>
+          <li><a href="plot04.html">Corner Plot</a></li>
+        </ul>
+      </li>
+      <li><a href="fitting.html">Fitting</a></li>
+      <li><a href="data.html">Data</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container" style="background-color:#DBD6D6">
+  
+
+  <div class="row">
+    
+
+    <div class="col-md-12" style="background-color:#FFFFFF">
+    <!-- <div class="col-md-4 form-group" style="background-color:#FFFFFF"> -->
+      <h2>Data</h2>
+      <hr>
+      <p>The following table includes all the synthetic data used for this example.</p>
+      <br> 
+        <table class="table table-bordered table-striped table-sm">
+        <thead><tr>
+        <th  style='text-align: center'>Data#</th>
+        <th  style='text-align: center'>X_values</th>
+        <th  style='text-align: center'>Y_values</th>
+        </tr></thead>
+        <tbody>
+        <tr>
+        <td align="right">0</td>
+        <td>0.323900561187328</td>
+        <td>8.101386149620037</td>
+        </tr>
+        <tr>
+        <td align="right">1</td>
+        <td>0.5265970079937599</td>
+        <td>2.0055041192416905</td>
+        </tr>
+        <tr>
+        <td align="right">2</td>
+        <td>0.7471320554420346</td>
+        <td>7.724314403886581</td>
+        </tr>
+        <tr>
+        <td align="right">3</td>
+        <td>1.1041394832474272</td>
+        <td>6.828753291301786</td>
+        </tr>
+        <tr>
+        <td align="right">4</td>
+        <td>1.3735542046053717</td>
+        <td>1.7816105145389916</td>
+        </tr>
+        <tr>
+        <td align="right">5</td>
+        <td>1.7030813954660928</td>
+        <td>2.2132891010488764</td>
+        </tr>
+        <tr>
+        <td align="right">6</td>
+        <td>1.743805418155151</td>
+        <td>2.35679517146957</td>
+        </tr>
+        <tr>
+        <td align="right">7</td>
+        <td>1.7596246090106171</td>
+        <td>2.1757319285739314</td>
+        </tr>
+        <tr>
+        <td align="right">8</td>
+        <td>1.914374160115131</td>
+        <td>1.90627715421599</td>
+        </tr>
+        <tr>
+        <td align="right">9</td>
+        <td>1.9756206110521757</td>
+        <td>0.7152666711634126</td>
+        </tr>
+        <tr>
+        <td align="right">10</td>
+        <td>2.0574856823857948</td>
+        <td>7.591632359318642</td>
+        </tr>
+        <tr>
+        <td align="right">11</td>
+        <td>2.2332377761329325</td>
+        <td>2.2918210896541504</td>
+        </tr>
+        <tr>
+        <td align="right">12</td>
+        <td>2.34427450699625</td>
+        <td>-0.7660160851488675</td>
+        </tr>
+        <tr>
+        <td align="right">13</td>
+        <td>2.655243515853286</td>
+        <td>2.990312982335088</td>
+        </tr>
+        <tr>
+        <td align="right">14</td>
+        <td>2.6903300216362416</td>
+        <td>2.144903468162453</td>
+        </tr>
+        <tr>
+        <td align="right">15</td>
+        <td>2.7011385417244513</td>
+        <td>0.21103753660614477</td>
+        </tr>
+        <tr>
+        <td align="right">16</td>
+        <td>2.9111960798435343</td>
+        <td>1.1927560119519496</td>
+        </tr>
+        <tr>
+        <td align="right">17</td>
+        <td>3.331285425205669</td>
+        <td>0.8659816005232923</td>
+        </tr>
+        <tr>
+        <td align="right">18</td>
+        <td>3.495914181429346</td>
+        <td>1.0599154674913072</td>
+        </tr>
+        <tr>
+        <td align="right">19</td>
+        <td>3.8856591566357235</td>
+        <td>1.081163450572105</td>
+        </tr>
+        <tr>
+        <td align="right">20</td>
+        <td>4.077645459479764</td>
+        <td>-0.09659270109496886</td>
+        </tr>
+        <tr>
+        <td align="right">21</td>
+        <td>4.211014508246693</td>
+        <td>0.12378295002053288</td>
+        </tr>
+        <tr>
+        <td align="right">22</td>
+        <td>4.218701210408774</td>
+        <td>0.2469148988172894</td>
+        </tr>
+        <tr>
+        <td align="right">23</td>
+        <td>4.410509761753593</td>
+        <td>-0.2240699845056215</td>
+        </tr>
+        <tr>
+        <td align="right">24</td>
+        <td>4.552904938574034</td>
+        <td>0.14619372646215117</td>
+        </tr>
+        <tr>
+        <td align="right">25</td>
+        <td>4.590002360104184</td>
+        <td>-0.18552169604057206</td>
+        </tr>
+        <tr>
+        <td align="right">26</td>
+        <td>4.629540535255384</td>
+        <td>-0.026297920851550145</td>
+        </tr>
+        <tr>
+        <td align="right">27</td>
+        <td>4.780195876746411</td>
+        <td>-0.42865449665142524</td>
+        </tr>
+        <tr>
+        <td align="right">28</td>
+        <td>5.086040931523277</td>
+        <td>-0.10987281202688576</td>
+        </tr>
+        <tr>
+        <td align="right">29</td>
+        <td>5.13319751411074</td>
+        <td>-0.3926130416328854</td>
+        </tr>
+        <tr>
+        <td align="right">30</td>
+        <td>5.221122225536531</td>
+        <td>0.5465922077850972</td>
+        </tr>
+        <tr>
+        <td align="right">31</td>
+        <td>5.45676044694265</td>
+        <td>-2.3093943277483246</td>
+        </tr>
+        <tr>
+        <td align="right">32</td>
+        <td>5.531984771160873</td>
+        <td>-1.3526280621569475</td>
+        </tr>
+        <tr>
+        <td align="right">33</td>
+        <td>5.623318689918204</td>
+        <td>-1.310638397470083</td>
+        </tr>
+        <tr>
+        <td align="right">34</td>
+        <td>5.8645277509057445</td>
+        <td>-0.38141835109743405</td>
+        </tr>
+        <tr>
+        <td align="right">35</td>
+        <td>6.173311433291653</td>
+        <td>-2.756659900320199</td>
+        </tr>
+        <tr>
+        <td align="right">36</td>
+        <td>6.297658815348229</td>
+        <td>0.027266258557586992</td>
+        </tr>
+        <tr>
+        <td align="right">37</td>
+        <td>6.384918362532205</td>
+        <td>-0.6692361355473153</td>
+        </tr>
+        <tr>
+        <td align="right">38</td>
+        <td>6.606713201414527</td>
+        <td>-1.3707202307609654</td>
+        </tr>
+        <tr>
+        <td align="right">39</td>
+        <td>6.905857237359028</td>
+        <td>-1.9123202137863815</td>
+        </tr>
+        <tr>
+        <td align="right">40</td>
+        <td>7.20018906542684</td>
+        <td>-2.075200255321404</td>
+        </tr>
+        <tr>
+        <td align="right">41</td>
+        <td>7.59193066034284</td>
+        <td>0.5272543910839593</td>
+        </tr>
+        <tr>
+        <td align="right">42</td>
+        <td>7.5970191514137975</td>
+        <td>-6.7199103985449815</td>
+        </tr>
+        <tr>
+        <td align="right">43</td>
+        <td>8.755321472842114</td>
+        <td>-4.302654872521218</td>
+        </tr>
+        <tr>
+        <td align="right">44</td>
+        <td>8.846108562138896</td>
+        <td>-10.848055899778526</td>
+        </tr>
+        <tr>
+        <td align="right">45</td>
+        <td>8.901827606695578</td>
+        <td>-4.484961191294446</td>
+        </tr>
+        <tr>
+        <td align="right">46</td>
+        <td>9.10379518896638</td>
+        <td>-2.8753628926104096</td>
+        </tr>
+        <tr>
+        <td align="right">47</td>
+        <td>9.317234206033486</td>
+        <td>-6.962851980707396</td>
+        </tr>
+        <tr>
+        <td align="right">48</td>
+        <td>9.948403526003158</td>
+        <td>-5.954674824025459</td>
+        </tr>
+        <tr>
+        <td align="right">49</td>
+        <td>9.999106056880171</td>
+        <td>-6.555928158312559</td>
+        </tr>
+        </tbody></table>
+
+
+    </div>
+
+   
+  </div>
+  
+
+</div>
+
+<br>
+<br>
+
+<!-- <div class="panel panel-default"> -->
+
+<div class="footer navbar-fixed-bottom" style="background-color:#4C4E4C">
+  <br>
+  <div class="footer-copyright py-3 text-center">
+        <font color=#FFFFFF>© 2018 Copyright: Data Science Boot Camp</font>
+  </div>
+  <br>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
